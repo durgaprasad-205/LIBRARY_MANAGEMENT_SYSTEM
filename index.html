@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Library Dashboard</h1>
+    
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search..." onkeyup="searchTable()">
+      <button onclick="fetchData()">🔄 Refresh Now</button>
+      <span id="lastUpdated">Last updated: --</span>
+      <select id="statusFilter" onchange="applyFilter()">
+        <option value="All">All</option>
+        <option value="Checked Out">Checked Out</option>
+        <option value="Returned">Returned</option>
+      </select>
+    </div>
+    
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Teacher</th>
+          <th>Book</th>
+          <th>Action</th>
+          <th>Status</th>
+          <th>Book UID</th>
+          <th>Update</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
